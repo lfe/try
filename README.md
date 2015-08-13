@@ -4,7 +4,7 @@
 ## Introduction
 
 This project is currently under active development. For more information,
-see the <a hreg="wiki">wiki</a>
+see the [wiki](../../wiki).
 
 
 ## Installation
