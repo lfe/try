@@ -3,7 +3,8 @@
 
 ## Introduction
 
-Add content to me here!
+This project is currently under active development. For more information,
+see the <a hreg="wiki" />
 
 
 ## Installation
@@ -14,7 +15,7 @@ Just add it to your ``rebar.config`` deps:
   {deps, [
     ...
     {try.lfe.io, ".*",
-      {git, "git@github.com:YOURNAME/try.lfe.io.git", "master"}}
+      {git, "git@github.com:lfex/try.lfe.io.git", "master"}}
       ]}.
 ```
 
