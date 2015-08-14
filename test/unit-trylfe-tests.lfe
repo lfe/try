@@ -1,4 +1,4 @@
-(defmodule unit-try.lfe.io-tests
+(defmodule unit-trylfe-tests
   (behaviour ltest-unit)
   (export all)
   (import
@@ -9,4 +9,4 @@
 (include-lib "ltest/include/ltest-macros.lfe")
 
 (deftest my-adder
-  (is-equal 4 (: try.lfe.io my-adder 2 2)))
+  (is-equal 4 (: trylfe my-adder 2 2)))

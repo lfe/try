@@ -3,7 +3,7 @@ $(error Can't find Erlang executable 'erl')
 exit 1
 endif
 
-LIB = $(PROJECT)
+LIB = trylfe
 DEPS = ./deps
 BIN_DIR = ./bin
 SOURCE_DIR = ./src
@@ -37,7 +37,7 @@ get-version:
 	@PATH=$(SCRIPT_PATH) $(LFETOOL) info version
 	@echo "Erlang/OTP, LFE, & library versions:"
 	@ERL_LIBS=$(ERL_LIBS) PATH=$(SCRIPT_PATH) erl \
-	-eval "lfe_io:format(\"~p~n\",['try.lfe.io-util':'get-versions'()])." \
+	-eval "lfe_io:format(\"~p~n\",['$(PROJECT)-util':'get-versions'()])." \
 	-noshell -s erlang halt
 
 get-deps:
@@ -120,5 +120,5 @@ push-all:
 	git push upstream --tags
 
 install: compile
-	@echo "Installing try.lfe.io ..."
+	@echo "Installing $(PROJECT) ..."
 	@PATH=$(SCRIPT_PATH) lfetool install lfe

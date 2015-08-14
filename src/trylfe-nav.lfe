@@ -1,4 +1,4 @@
-(defmodule try.lfe.io-nav
+(defmodule trylfe-nav
   (export all))
 
 (include-lib "deps/exemplar/include/html-macros.lfe")

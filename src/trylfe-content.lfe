@@ -1,4 +1,4 @@
-(defmodule try.lfe.io-content
+(defmodule trylfe-content
   (export all))
 
 (include-lib "deps/exemplar/include/html-macros.lfe")
@@ -18,7 +18,7 @@
         (body
           (main
             (list
-              (try.lfe.io-nav:get-navbar)
+              (trylfe-nav:get-navbar)
               (div '(class "section")
                 (div '(class "container")
                   (div '(class "row well")
@@ -41,7 +41,7 @@
           title
           (div '(class "col-md-3 col-sm-4 sidebar")
             (ul '(class "nav nav-stacked nav-pills")
-              (try.lfe.io-nav:get-side-menu)))
+              (trylfe-nav:get-side-menu)))
           (div
             (list
               (h1 title)

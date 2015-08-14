@@ -1,4 +1,4 @@
-(defmodule try.lfe.io
+(defmodule trylfe
   (export all))
 
 (defun my-adder (x y)
@@ -11,4 +11,4 @@
 
   In particular, this function is intended to handle all traffic for this
   app."
-  (lfest:out-helper arg-data #'try.lfe.io-routes:routes/3))
+  (lfest:out-helper arg-data #'trylfe-routes:routes/3))
