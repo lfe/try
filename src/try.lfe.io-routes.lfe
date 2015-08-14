@@ -1,8 +1,8 @@
 (defmodule try.lfe.io-routes
   (export all))
 
-(include-file "deps/exemplar/include/html-macros.lfe")
-(include-file "deps/lfest/include/macros.lfe")
+(include-lib "exemplar/include/html-macros.lfe")
+(include-lib "lfest/include/lfest-macros.lfe")
 
 (defroutes
   ('GET "/"
