@@ -14,6 +14,8 @@
             (title title)
             (link '(rel "stylesheet" href "/css/bootstrap-min.css"))
             (link '(rel "stylesheet" href "/css/bootstrap-slate-min.css"))
+            (link '(rel "stylesheet" href "/css/styles.css"))
+            (script '(src "/js/jquery.js"))
             (script '(src "/js/bootstrap-min.js"))))
         (body
           (main
@@ -21,8 +23,11 @@
               (trylfe-nav:get-navbar)
               (div '(class "section")
                 (div '(class "container")
-                  (div '(class "row well")
-                    remaining))))))))))
+                  (list
+                    (div '(class "row well")
+                         remaining)
+                    (div '(id "footer")
+                      (trylfe-nav:get-footer-nav))))))))))))
 
 (defun base-sidebar-page (title sidebar remaining)
   "We can also make building HTML easier by using functions."
@@ -84,17 +89,4 @@
                     user-id " (user id) | "
                     account-id " (account id)"))
             (div (p fetched-content))))))))
-
-(defun four-oh-four (message)
-  "Custom 404 page."
-    (lfest-html-resp:not-found
-      (base-page
-        "404"
-        (div
-          (list
-            (h1 '"404 - Not Found")
-            (div (p message)))))))
-
-
-
 
