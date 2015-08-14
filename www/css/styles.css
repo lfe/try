@@ -2,6 +2,11 @@ body {
     background-color: #252525;
 }
 
+.navbar {
+    border: 0;
+    border-radius: 0;
+}
+
 #header .logo {
   float: left;
   margin-top: 17px;
@@ -24,14 +29,19 @@ body {
     float: right;
 }
 
+.navbar-nav>li {
+    padding-top: 5px;
+}
+
 .navbar-nav>li>a {
     height: 61px;
     color: #ffcc00;
-    font-weight: bold;
+    border: 0;
 }
 
 .navbar-nav>li>a:hover {
-    color: #fff; 
+    color: #fff;
+    background-color: #1c1c1c;
 }
 
 .well {
