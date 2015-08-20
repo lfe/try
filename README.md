@@ -35,4 +35,4 @@ In a development environment, simply run the ``dev`` target:
 $ make dev
 ```
 
-This will start up YAWS and you'll be able to view the site at [http://localhost:5099/]
+This will start up YAWS and you'll be able to view the site at [[http://localhost:5099/]]
