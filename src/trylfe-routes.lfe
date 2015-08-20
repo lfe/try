@@ -7,6 +7,8 @@
 (defroutes
   ('GET "/"
     (trylfe-content:get-content arg-data))
+  ('GET "/eval"
+    (trylfe-rest:eval-lfe arg-data))
   ('NOTFOUND
    (let* ((joined-path (++ "/" (string:join path "/")))
           (msg (++ "Unmatched route!~n~n"

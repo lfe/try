@@ -83,7 +83,7 @@ function goToPage(pageNumber) {
 function eval_lfe(code) {
     var data;
     $.ajax({
-        url: "eval.json",
+        url: "/eval",
         data: { expr : code },
         async: false,
         success: function(res) { data = res; }
@@ -160,6 +160,7 @@ function onHandle(line, report) {
         return [{msg: data.msg, className: "jquery-console-message-value"}];
     } else {
         // perform evaluation
+        console.log("preparing to eval input ...");
         data = eval_lfe(input);
     }
 
