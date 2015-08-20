@@ -25,6 +25,7 @@
 
 #console div.jquery-console-message-value {
   color:#0a0;
+  white-space: pre;
 }
 
 #console div.jquery-console-prompt-box {
