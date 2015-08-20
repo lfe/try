@@ -48,10 +48,13 @@
 (defun start ()
   (list
     (p '(class "bottom")
-       (++ "Welcome to LFE! "
-           "You can see an LFE interpreter above - we call it a "
-           (em "REPL")
-           "."))
+       "Welcome to LFE!")
+    (p '(class "bottom")
+       (++ "You can see an LFE interpreter above - we call it a "
+           (em "REPL") ". It's not actually a " (em "real")
+           " LFE REPL -- it's a JavaScript wrapper for a real one. "
+           "Which is good enough for trying things out in a "
+           "web page :-)"))
     (p '(class "bottom")
        (++ "Type "
            (code "next")
