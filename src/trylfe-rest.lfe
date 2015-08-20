@@ -1,11 +1,10 @@
 (defmodule trylfe-rest
   (export (eval-lfe 1)))
 
+(include-lib "clj/include/compose.lfe")
 
 (defun eval-lfe (arg-data)
-  (let* ((query (yaws_api:parse_query arg-data))
-         (expr (element 2 (lists:keyfind "expr" 1 query)))
-         (`#(,result ,state) (lfe_shell:run_string expr '()))
+  (let* ((`#(,result ,state) (execute (get-expr arg-data)))
          (str-result (lists:flatten (lfe_io:fwrite1 "~p~n" `(,result))))
          (json (ljson:encode `#(result ,(list_to_binary str-result)))))
     ;; XXX DEBUG
@@ -14,3 +13,21 @@
     (io:format "Got json ~p~n" (list json))
     ;; XXX END DEBUG
     (lfest-resp:content "application/json" json)))
+
+(defun get-expr (arg-data)
+  (lfe_io:format "Got arg-data: ~p~n" (list arg-data))
+  (->> arg-data
+       (yaws_api:parse_query)
+       (lists:keyfind "expr" 1)
+       (element 2)))
+
+(defun execute (expr)
+  ;; XXX get state from somewhere
+  ;;     -- if undefined, use lfe_shell:run_string/2
+  ;;     -- else, use the state in lfe_shell:run_string/3
+  ;; XXX execute and get result + updated state
+  ;; XXX extract env from state
+  ;; XXX save env somewhere
+  ;; XXX return value
+  (lfe_io:format "Got expression: ~p~n" (list expr))
+  (lfe_shell:run_string expr '()))
