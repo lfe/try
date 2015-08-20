@@ -1,44 +1,9 @@
 <p>
-  Success! Now you can call this new <code>square</code> function just like you called the old <code>square</code> function.
+  Success! Now you can call this new <code>square</code> function ... but not
+  quite like you called the old <code>square</code> function. You will need to
+  use <code>funcall</code>.
 </p>
 
 <p>
-  By now, you know that lists are quite important in LFE
-  But LFE also has other data structures:
-</p>
-
-<p>
-  Tuples: <code class="expr">#(some things here)</code><br/>
-  Maps: <code class="expr">#m(foo "bar" 3 4)</code><br/>
-  Sets: <code class="expr">(sets:from_list '(1 2 3 4))</code><br/>
-</p>
-
-<p>
-  Tuples and lists are sequential and ordered collections. Lists of tuples are
-  called a proplist.
-  Sets are not ordered, and they cannot contain duplicate elements.
-  Maps are key-value collections, where the keys can be any object.
-  Here, we've used what LFE calls a <em>atom</em> (<code>:foo</code>) for one of the keys, and a number for the other key.
-</p>
-
-<p>
-  Now I'll tell you another thing that may surprise you: LFE data are <em>immutable</em> - they can never change.
-  When you do anything on a list, including adding and removing elements, you actually get a brand new list.
-  (Fortunately, LFE and its VM (Erlang) are efficient at creating new lists).
-  In general, LFE encourages you to have as little mutable state as possible.
-  For example, instead of "for" loops and other state-changing constructs, most
-  of the time you'll see functions doing transformations on immutable data and
-  returning new structures, without changing the old one.
-</p>
-
-<p>
-  A prime example of this is <code>lists:foldl</code>. <code>lists:foldl</code> is a <em>higher order function</em>, which means that it takes another function as an argument.
-  For example, you can ask <code>lists:foldl</code> to add each number in a
-  list by passing it the <code>+</code> function, followed by an initial value
-  and the the list of numbers.
-</p>
-<p>
-  Try it for yourself:
-  type <code class="expr">(lists:foldl #'+/2 '(1 2 3 4 5 6))</code>
-  to continue.
+  Try it out to continue: <code class="expr">(funcall square 10)</code>
 </p>

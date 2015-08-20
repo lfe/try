@@ -22,6 +22,7 @@ var pages = [
             "page9",
             "page10",
             "page11",
+            "page12",
             "end"
         ];
 var pageExitConditions = [
