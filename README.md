@@ -29,4 +29,10 @@ And then do the usual:
 
 ## Usage
 
-Add content to me here!
+In a development environment, simply run the ``dev`` target:
+
+```bash
+$ make dev
+```
+
+This will start up YAWS and you'll be able to view the site at http://localhost:5099/
