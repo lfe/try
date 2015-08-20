@@ -6,12 +6,7 @@
 
 (defroutes
   ('GET "/"
-    (trylfe-content:get-sidebar-content arg-data))
-  ('GET "/content/:id"
-    (trylfe-content:get-content id arg-data))
-  ('GET "/relation/:userid/:accountid"
-    (trylfe-content:get-content userid accountid arg-data))
-  ;; When nothing matches, do this
+    (trylfe-content:get-content arg-data))
   ('NOTFOUND
    (let* ((joined-path (++ "/" (string:join path "/")))
           (msg (++ "Unmatched route!~n~n"

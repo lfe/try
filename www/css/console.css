@@ -1,0 +1,167 @@
+#console {
+  height: 330px;
+  padding: 10px;
+  background: #111;
+  font-family: courier;
+  font-size: 14px;
+  color: #090;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+#console textarea {
+  /* Use a largish font to ensure iOS doesn't zoom in on focus */
+  font-size: 2em;
+}
+
+#console div.jquery-console-inner {
+  width:100%;
+  height:300px;
+  margin: 10px 10px;
+  overflow:auto;
+  text-align:left;
+}
+
+#console div.jquery-console-message-value {
+  color:#0a0;
+}
+
+#console div.jquery-console-prompt-box {
+  color: #0c0;
+  font-weight:bold;
+}
+
+#console div.jquery-console-focus span.jquery-console-cursor {
+  background:#6f6;
+  color: #222;
+}
+
+#console div.jquery-console-message-error {
+  color:#a00;
+}
+
+#console div.jquery-console-message-success {
+  color:#63b132;
+}
+
+#console span.jquery-console-prompt-label {
+}
+
+#changer {
+  line-height: 1.3em;
+  padding: 20px;
+  background: #222;
+  margin-bottom: 10px;
+  border: 1px solid #111;
+  border-radius: 5px;
+}
+
+#changer p {
+    margin: 0.6em;
+}
+
+#changer a {
+  color: #0f0;
+}
+
+#changer a:visited {
+  color: #60749E;
+}
+
+#changer code {
+  background-color: #1a1a1a;
+  color: #0c0;
+  font-family: courier, monospace;
+  padding: 0.1em 0.25em 0.1em 0.25em;
+}
+
+#changer ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+#tuttext {
+}
+
+.continue {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+/* Coderay alpha style */
+code {
+  display: inline-block;
+}
+
+.code {
+  color: #000;
+}
+
+.code pre { margin: 0px; }
+
+span.code { white-space: pre; border: 0px; padding: 2px; }
+span.code:hover { cursor: pointer; }
+
+table.code { border-collapse: collapse; width: 100%; padding: 2px; }
+table.code td { padding: 2px 4px; vertical-align: top; }
+
+.code .line_numbers, .code .no {
+  background-color: #333;
+  color: red;
+  text-align: right;
+}
+
+/* keywords */
+#changer .code span.r {
+  color: #0000ff;
+  font-weight: bold;
+}
+
+/* symbols */
+#changer .code span.sy {
+  color: #318495;
+}
+
+/* strings */
+#changer .code span.s {
+  color: #008800;
+}
+
+/* paren */
+#changer .code span.of {
+  color: #222;
+  font-weight: bold;
+}
+
+/* comment */
+#changer .code span.c {
+  color: #ccc;
+}
+
+/* operator */
+#changer .code span.cl {
+
+}
+
+/* number */
+#changer .code span.i {
+  color: #ff0000;
+}
+
+@media (max-width: 619px) {
+
+  #wrapper {
+    width: 100%;
+  }
+  #header {
+    margin: 20px auto;
+  }
+  #console div.jquery-console-inner {
+    width: auto;
+  }
+
+}
+
